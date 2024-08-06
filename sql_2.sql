@@ -1,17 +1,16 @@
-two tables buses and passengers
-buses: id,origin, destination, time, unique (origin, destination, time)
-passengers: id, origin, destination, time
-each row of table buses has info about origin, destination, and time of departure.
-each row of passengers describes single passenger and has info about origin station and destination station and time of arrival at destination station
-passengers board earliest bus that travels directly to destination. passengers can board bus at same minute they arrive. 
-all passengers who are still at the station at 23:59 dont board any of those 23:59 buses leave platform without boarding bus. 
-no two buses with same origin and destination depart at the same time
-SQL query that for each bus, returns the number of passengers boarding it. 
-SELECT bus.id, COUNT(passengers.id) as passengers_on_board. 
-Passenger time is time arriving at destination station. Buses time is time of departure.
-So passenger time has to be before bus departure time and passenger origin = bus origin, pass destination = bus destination
-FROM buses
-Order rows by ID ASC
+--two tables buses and passengers
+--buses: id,origin, destination, time, unique (origin, destination, time)
+--passengers: id, origin, destination, time
+--each row of table buses has info about origin, destination, and time of departure.
+--each row of passengers describes single passenger and has info about origin station and destination station and time of arrival at destination station
+--passengers board earliest bus that travels directly to destination. passengers can board bus at same minute they arrive. 
+--all passengers who are still at the station at 23:59 dont board any of those 23:59 buses leave platform without boarding bus. 
+--no two buses with same origin and destination depart at the same time
+--SQL query that for each bus, returns the number of passengers boarding it. 
+--SELECT bus.id, COUNT(passengers.id) as passengers_on_board. 
+--Passenger time is time arriving at destination station. Buses time is time of departure.
+--So passenger time has to be before bus departure time and passenger origin = bus origin, pass destination = bus destination
+
 Test data
 INSERT INTO buses values (20, 'Berlin'  'Paris', '06:20') --bus num, origin, destination, departure time
 INSERT INTO buses values (21, 'Berlin'  'Paris', '14:00')
