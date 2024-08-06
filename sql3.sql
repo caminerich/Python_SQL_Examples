@@ -1,11 +1,11 @@
-recuiting platform. each recruit co can make a request for their canadiates to complete a personalized skill assessment
-assessment can contin tasks in three categories: SQL, ALGO, BugFixing.
-Following assessment, co recieves a report containing, for each candidate, delcared years of experience (integer 0-100) and score in each category
-score of null is a perfect score
-table assessments with id integer, experience integer, sql integer, algo integer, bug_fixing integer, unique(id)
-Now, write a sql query exp years of experience, max number of assessment with null, 
-and count of candidates with same amount of experience,
- and count ofassessments with null 
+--recuiting platform. each recruit co can make a request for their canadiates to complete a personalized skill assessment
+--assessment can contin tasks in three categories: SQL, ALGO, BugFixing.
+--Following assessment, co recieves a report containing, for each candidate, delcared years of experience (integer 0-100) and score in each category
+--score of null is a perfect score
+--table assessments with id integer, experience integer, sql integer, algo integer, bug_fixing integer, unique(id)
+--Now, write a sql query exp years of experience, max number of assessment with null, 
+--and count of candidates with same amount of experience,
+-- and count ofassessments with null 
 SELECT 
     id, 
     COUNT(*) AS count, 
@@ -28,6 +28,7 @@ GROUP BY
     experience
 ORDER BY 
     experience DESC;
+    
 Test Data
 insert into assessments values ( 1, 3, 100, NULL, 50);
 insert into assessments values ( 2, 5, NULL, 100, 100);
