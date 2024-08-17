@@ -1,2 +1,2 @@
-# Grant
- Grant Street Tech
+# Python and SQL examples
+A collection of completed coding challenges
