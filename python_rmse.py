@@ -23,5 +23,3 @@ def solution(predicted, observed):
 predicted = [4, 25, 0.76, 11]
 observed = [3, 21, -1.25, 13]
 print(solution(predicted, observed))  # Output should be 2.5
-
-#this solution passed unit tests and scored 100% on the Codility platform
