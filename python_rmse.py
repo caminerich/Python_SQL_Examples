@@ -1,10 +1,10 @@
 '''
 Write a function def solution(prdicted, observed)
-    that given arrays predicted and observed of floats (length N) returns root mean square error of these values
-    fr every J the values predicted[J] forresponds to observed[J]. The result will be accepted if its absolute error is at most 10^-4
+that given arrays predicted and observed of floats (length N) returns root mean square error of these values
+for every J the values predicted[J] corresponds to observed[J]. 
+The result will be accepted if its absolute error is at most 10^-4
 For example, given predicted = [4,25,0.76,11], observed = [3,21,-1.25,13] the function sould return 2.5
 Assume intereger within range [1....1,000] and each element in predicted and observed arrays is a vlue within the range [-10^9...10^9]
-
 
 '''
 import math
