@@ -1,26 +1,18 @@
 '''
-
-
 write a function class Solution {public String solution(String S);}
 that given a string S, returns a string that represents all occurances of all one letter, two letter, three-letter, etc
-combinations that appear in the input string S
-Only list combinations that occue in the actual input and only include combinations tht involve letters (no numbers, spaces, or special characters)
+combinations that appear in the input string S.
+Only list combinations that occur in the actual input and only include combinations tht involve letters (no numbers, spaces, or special characters)
 Ignore capitialization. List in order of frequency of occurence, then alphabetically. 
-Example: input string is "Banana Boat" would return the folling string with each line sepearated by a new license
+Example: input string is "Banana Boat" would return the folling string with each line sepearated by a new line
 4:a
 2:an
 2:ana
 2:b
 2:n
 2:na
-1:anan
-1:anana
 etc. 
 assume max length of S is 50
-
-The answer looks right but failed unit tests
-
-
 
 '''
 

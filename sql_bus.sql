@@ -10,21 +10,25 @@
 --SELECT bus.id, COUNT(passengers.id) as passengers_on_board. 
 --Passenger time is time arriving at destination station. Buses time is time of departure.
 --So passenger time has to be before bus departure time and passenger origin = bus origin, pass destination = bus destination
-
+'''
 Test data
-INSERT INTO buses values (20, 'Berlin'  'Paris', '06:20') --bus num, origin, destination, departure time
-INSERT INTO buses values (21, 'Berlin'  'Paris', '14:00')
-INSERT INTO buses values (22, 'Berlin'  'Paris', '21:40')
-INSERT INTO buses values (30, 'Paris'  'Madrid', '13:30')
-INSERT INTO passengers values (1, 'Paris', 'Madrid', '13:30') --this passenger on bus 30. id, origin, destination, time arrive at dest station
-INSERT INTO passengers values (2, 'Paris', 'Madrid', '13:31') --this passenger misses bus 30
-INSERT INTO passengers values (40, 'Berlin', 'Paris', '06:15') --this passenger on bus 20
-INSERT INTO passengers values (41, 'Berlin', 'Paris', '06:50') --this passenger on bus 21
-INSERT INTO passengers values (42, 'Berlin', 'Paris', '7:12') --this passenger on bus 21
-INSERT INTO passengers values (43, 'Berlin', 'Paris', '12:03') --this passenger on bus 22
-INSERT INTO passengers values (44, 'Berlin', 'Paris', '20:00') --no bus for this passenger
+CREATE TABLE buses (id INTEGER PRIMARY KEY, origin TEXT, destination TEXT, time TEXT);
+CREATE TABLE passengers (id INTEGER PRIMARY KEY, origin TEXT, destination TEXT, time TEXT);
+INSERT INTO buses values (20, 'Berlin', 'Paris', '06:20'); --bus num, origin, destination, departure time
+INSERT INTO buses values (21, 'Berlin', 'Paris', '14:00');
+INSERT INTO buses values (22, 'Berlin', 'Paris', '21:40');
+INSERT INTO buses values (30, 'Paris', 'Madrid', '13:30');
+INSERT INTO passengers values (1, 'Paris', 'Madrid', '13:30'); --this passenger on bus 30
+INSERT INTO passengers values (2, 'Paris', 'Madrid', '13:31'); --this passenger misses bus 30
+INSERT INTO passengers values (40, 'Berlin', 'Paris', '06:15'); --this passenger on bus 20
+INSERT INTO passengers values (41, 'Berlin', 'Paris', '06:50'); --this passenger on bus 21
+INSERT INTO passengers values (42, 'Berlin', 'Paris', '7:12'); --this passenger on bus 21
+INSERT INTO passengers values (43, 'Berlin', 'Paris', '12:03'); --this passenger on bus 22
+INSERT INTO passengers values (44, 'Berlin', 'Paris', '20:00'); --no bus for this passenger
+'''
 
-SELECT buses.id, COUNT(passengers.id) as passengers_on_board
+SELECT buses.id
+,COUNT(passengers.id) as passengers_on_board
 FROM buses
 JOIN passengers ON buses.origin = passengers.origin 
     AND buses.destination = passengers.destination 
@@ -37,5 +41,4 @@ JOIN passengers ON buses.origin = passengers.origin
 )
 WHERE passengers.time < '23:59'
 GROUP BY buses.id 
-ORDER BY buses.id ASC
-;
+ORDER BY buses.id ASC;

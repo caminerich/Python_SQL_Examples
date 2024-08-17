@@ -1,7 +1,8 @@
 --table prices with day integer not null, price integer not null
---avg bitcoin priceper day per period of time
---daysin range
---find anomalies during period of time. find days when price spiked (price larger than on the day before and day after). the first day and last day can not be spikes. 
+--avg bitcoin price per day per period of time
+--days in range
+--find anomalies during period of time. find days when price spiked (price larger than on the day before and day after). 
+--the first day and last day can not be spikes. 
 --return sql query with days of bitcoin price spiles. order by day increasing. 
 SELECT day
 FROM prices
@@ -24,5 +25,3 @@ WHERE price > (
     FROM prices
 )
 ORDER BY day ASC;
-
--- this solution is correct and scored 100% on codility unit tests
