@@ -42,6 +42,7 @@ class Solution:
         
         return result
 
+
 # test
 sol = Solution()
 input_string = "Banana Boat"

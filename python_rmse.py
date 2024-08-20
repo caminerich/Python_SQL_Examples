@@ -19,6 +19,8 @@ def solution(predicted, observed):
     # Return the square root of the mean squared difference
     return math.sqrt(mean_squared_diff)
 
+
+
 # test
 predicted = [4, 25, 0.76, 11]
 observed = [3, 21, -1.25, 13]
