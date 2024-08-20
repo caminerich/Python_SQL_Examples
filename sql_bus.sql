@@ -10,7 +10,7 @@
 --SELECT bus.id, COUNT(passengers.id) as passengers_on_board. 
 --Passenger time is time arriving at destination station. Buses time is time of departure.
 --So passenger time has to be before bus departure time and passenger origin = bus origin, pass destination = bus destination
-'''
+"""
 Test data
 CREATE TABLE buses (id INTEGER PRIMARY KEY, origin TEXT, destination TEXT, time TEXT);
 CREATE TABLE passengers (id INTEGER PRIMARY KEY, origin TEXT, destination TEXT, time TEXT);
@@ -25,7 +25,7 @@ INSERT INTO passengers values (41, 'Berlin', 'Paris', '06:50'); --this passenger
 INSERT INTO passengers values (42, 'Berlin', 'Paris', '7:12'); --this passenger on bus 21
 INSERT INTO passengers values (43, 'Berlin', 'Paris', '12:03'); --this passenger on bus 22
 INSERT INTO passengers values (44, 'Berlin', 'Paris', '20:00'); --no bus for this passenger
-'''
+"""
 
 SELECT buses.id
 ,COUNT(passengers.id) as passengers_on_board

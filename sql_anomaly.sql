@@ -4,6 +4,7 @@
 --find anomalies during period of time. find days when price spiked (price larger than on the day before and day after). 
 --the first day and last day can not be spikes. 
 --return sql query with days of bitcoin price spiles. order by day increasing. 
+-- dont have insert statements 
 SELECT day
 FROM prices
 WHERE 

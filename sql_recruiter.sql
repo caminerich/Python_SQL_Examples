@@ -8,7 +8,7 @@
 -- 1.years of experience (exp)
 -- 2. max number of assessment per candidate with perfect (null) score (max), 
 -- 3. count of candidates with same amount of experience (can),
-'''
+"""
 -- Test Data
 CREATE TABLE assessments (id INTEGER PRIMARY KEY, experience INTEGER, sql INTEGER, algo INTEGER, bug_fixing INTEGER);
 insert into assessments values ( 1, 3, 100, NULL, 50);
@@ -16,7 +16,7 @@ insert into assessments values ( 2, 5, NULL, 100, 100);
 insert into assessments values ( 3, 1, 100, 100, 100);
 insert into assessments values ( 4, 5, 100, 50, NULL);
 insert into assessments values ( 5, 5, 100, 100, 100);
-'''
+"""
 
 SELECT 
     experience AS exp

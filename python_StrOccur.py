@@ -42,7 +42,7 @@ class Solution:
         
         return result
 
-# Example usage
+# test case
 sol = Solution()
 input_string = "Banana Boat"
 print(sol.solution(input_string))
