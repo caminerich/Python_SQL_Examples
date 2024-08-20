@@ -21,7 +21,7 @@ from collections import defaultdict
 
 class Solution:
     def solution(self, S):
-        # Clean the input string: remove non-letter characters and convert to lowercase
+        # Remove non-letter characters and convert to lowercase
         cleaned_string = re.sub(r'[^a-zA-Z]', '', S).lower()
         
         # Dictionary to store the frequency of each substring
@@ -42,7 +42,8 @@ class Solution:
         
         return result
 
-# test case
+
+# test
 sol = Solution()
 input_string = "Banana Boat"
 print(sol.solution(input_string))
